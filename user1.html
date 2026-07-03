@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #b02a37;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>User Registration Form</h2>
+
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <td>Full Name</td>
+                <td><input type="text" name="fullname" required></td>
+            </tr>
+
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="email" required></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" required></td>
+            </tr>
+
+            <tr>
+                <td>Confirm Password</td>
+                <td><input type="password" name="confirm_password" required></td>
+            </tr>
+
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="tel" name="phone" pattern="[0-9]{10}" placeholder="10-digit number" required></td>
+            </tr>
+
+            <tr>
+                <td>Date of Birth</td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+
+            <tr>
+                <td>Gender</td>
+                <td>
+                    <input type="radio" name="gender" value="Male"> Male
+                    <input type="radio" name="gender" value="Female"> Female
+                    <input type="radio" name="gender" value="Other"> Other
+                </td>
+            </tr>
+
+            <tr>
+                <td>Country</td>
+                <td>
+                    <select name="country">
+                        <option value="">Select Country</option>
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>Canada</option>
+                        <option>Australia</option>
+                        <option>UK</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                <td>
+                    <textarea name="address" rows="4"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Hobbies</td>
+                <td>
+                    <input type="checkbox" name="hobbies" value="Reading"> Reading
+                    <input type="checkbox" name="hobbies" value="Sports"> Sports
+                    <input type="checkbox" name="hobbies" value="Music"> Music
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="buttons">
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>
